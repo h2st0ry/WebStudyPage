@@ -1,0 +1,121 @@
+.SiteName {
+  display: inline-block;
+  font-size: 60px;
+  font-weight: 100;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  width: 70vw;
+  text-align: center;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.SiteName:hover {
+  transition: 1s ease;
+  transform: scale(1.03);
+}
+
+
+
+a {
+  text-decoration: none;
+  letter-spacing: 3px;
+  color: inherit;
+  width: 100px;
+}
+
+a:hover {
+  transition: 1s ease;
+  transform: scale(1.03);
+}
+
+a.MyPage {
+  margin-right: 2%;
+}
+
+
+
+.my_category {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  width: 30vw;
+  float: right;
+
+  margin-top: 80px;
+  margin-bottom: 5px;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header {
+  display: flex;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  border-image: linear-gradient(to right, rgb(255, 255, 255), rgb(190, 234, 255)) 1;;
+  align-items: center;
+  animation: waveGradient 1s ease infinite;
+}
+
+
+
+
+.SideBarBox {
+  display: flex;
+  width: 20%;
+  height: 100vh;
+  flex-direction: column; /* 세로 방향으로 정렬 */
+  align-items: flex-start; /* 왼쪽 정렬 */
+  gap: 10px;               /* 각 box 간격 */
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* 각 box (a 태그) 스타일 */
+.box {
+  display: block;
+  width: 80%;
+  height: 30px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  background-color: rgb(190, 234, 255);
+  border-radius: 100px;            /* 모서리 둥글게 */
+  text-align: center;
+  transition: background-color 0.3s ease; /* 호버 효과 */
+}
+
+.box:hover {
+  background-color: rgb(255, 255, 255, 0.5); /* 마우스 호버 시 색상 변경 */
+}
+
+
+.header::before {
+  content: '';
+  position: absolute;
+  bottom: 0; /* 테두리 아래쪽에 위치 */
+  left: 0;
+  right: 0;
+  height: 2px; /* border의 두께 */
+  background: linear-gradient(to right, rgb(255, 255, 255), rgb(190, 234, 255)); /* 그라데이션 배경 */
+  background-size: 400% 100%; /* 그라데이션 크기 설정 */
+  animation: gradientMove 3s linear infinite; /* 그라데이션 애니메이션 */
+  z-index: 1; /* 다른 요소들 위로 위치 */
+}
+
+
+@keyframes sizeup {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
