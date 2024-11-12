@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom';
+
 export default function MyCategory() {
     return (
-        <div className="my_category">
-                <a className="MyPage" href="My_Page">My Page</a>
-            <a href="Member">Member</a>
+        <div className="MyCategory">
+            <Link to="/MyPage">My Page</Link>
+            <Link to="/Member">Member</Link>
         </div>
     );
-};
+}
