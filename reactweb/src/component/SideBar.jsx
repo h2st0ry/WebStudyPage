@@ -5,7 +5,7 @@ export default function SideBar() {
             <div className="box"><a href="QnA">Q & A</a></div>
             <div className="box"><a href="Sharing">Sharing</a></div>
             <div className="box"><a href="ToDoList">To Do List</a></div>
-
+            <div className="box"><a href="Tools">Tools</a></div>
         </div>
     );
 }

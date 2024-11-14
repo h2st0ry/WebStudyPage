@@ -7,6 +7,7 @@ import Communication from './component/Communication';
 import QnA from './component/QnA';
 import Sharing from './component/Sharing';
 import ToDoList from './component/ToDoList';
+import Tools from './component/Tools';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/QnA" element={<QnA />} />
           <Route path="/Sharing" element={<Sharing />} />
           <Route path="/ToDoList" element={<ToDoList />} />
+          <Route path="/Tools" element={<Tools />} />
         </Routes>
       </div>
     </BrowserRouter>
