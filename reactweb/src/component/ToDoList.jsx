@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import classNames from 'classnames';
 
 export default function ToDoList() {
     const [tasks, setTasks] = useState([]);

@@ -83,14 +83,14 @@ a.MyPage {
 .header::before {
   content: '';
   position: absolute;
-  bottom: 0; /* 테두리 아래쪽에 위치 */
+  bottom: 0;
   left: 0;
   right: 0;
-  height: 2px; /* border의 두께 */
+  height: 2px;
   background: linear-gradient(to right, rgb(255, 246, 230), rgb(146, 89, 56)); /* 그라데이션 배경 */
-  background-size: 400% 100%; /* 그라데이션 크기 설정 */
-  animation: gradientMove 2s linear infinite; /* 그라데이션 애니메이션 */
-  z-index: 1; /* 다른 요소들 위로 위치 */
+  background-size: 400% 100%;
+  animation: gradientMove 2s linear infinite;
+  z-index: 1;
 }
 
 
@@ -110,9 +110,9 @@ a.MyPage {
   width: 260px;
   height: 100vh;
   padding-top: 20px;
-  flex-direction: column; /* 세로 방향으로 정렬 */
-  align-items: flex-start; /* 왼쪽 정렬 */
-  gap: 20px;               /* 각 box 간격 */
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   z-index: 3;
 }
@@ -282,6 +282,30 @@ a.MyPage {
 
 .List {
   margin-right: 20px;
+}
+
+
+.MemberInput {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  border: 2px solid rgb(146, 86, 51);
+  border-radius: 5px;
+  outline: none;
+  margin-right: 10px;
+  transition: border-color 0.3s ease;
+}
+
+
+.MemberList {
+  width: 380px;
+  height: 30px;
+  padding-top: 10px;
+  border:rgb(109, 65, 39) solid 1px;
+  border-radius: 10px;
+  text-align: left;
 }
 
 
