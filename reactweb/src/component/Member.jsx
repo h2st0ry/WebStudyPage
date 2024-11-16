@@ -22,15 +22,6 @@ export default function Member() {
         }
     };
 
-    // const toggleMember = (memberId) => {
-    //     const updatedMembers = members.map((member) =>
-    //         member.id === memberId ? { ...member, checked: !member.checked } : member
-    //     );
-
-        setMembers(updatedMembers);
-        localStorage.setItem("members", JSON.stringify(updatedMembers));
-    };
-
     const deleteMember = (memberId) => {
         const updatedMembers = members.map(member =>
             member.id === memberId ? { ...member, deleted: true } : member
@@ -63,15 +54,14 @@ export default function Member() {
 
             <div className="MemberList">
                 {members.map((member) => (
-                    <div key={member.id} className={member.checked ? "checked" : ""}>
-                        <span
-                            onClick={() => toggleMember(member.id)}
-                            style={{ textDecoration: member.checked ? "line-through" : "none", cursor: "pointer" }}
+                    <div className="MemberItem" key={member.id}>
+                        <span 
+                            style={{ textDecoration: member.checked ? "line-through" : "none" }}
                         >
                             {member.text}
                         </span>
                         <button
-                            className="deleteButton"
+                            className="MemberDeleteButton"
                             onClick={() => deleteMember(member.id)}>
                             Delete
                         </button>

@@ -84,7 +84,7 @@ export default function ToDoList() {
                         <div className="customCheckbox" onClick={() => toggleTask(task.id)}></div>
                         <span className={`List ${task.checked ? 'checked' : ''}`}>{task.text}</span>
                         <button
-                            className="deleteButton"
+                            className="ToDoDeleteButton"
                             onClick={() => deleteTask(task.id)}>
                             Delete
                         </button>
