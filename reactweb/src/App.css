@@ -300,9 +300,11 @@ a.MyPage {
 
 
 .MemberList {
-  width: 380px;
-  height: 30px;
+  background-color: #fff;
+  width: 500px;
+  height: 400px;
   padding-top: 10px;
+  padding-left: 10px;;
   border:rgb(109, 65, 39) solid 1px;
   border-radius: 10px;
   text-align: left;

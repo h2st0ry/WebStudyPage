@@ -22,13 +22,26 @@ export default function Member() {
         }
     };
 
-    const toggleMember = (memberId) => {
-        const updatedMembers = members.map((member) =>
-            member.id === memberId ? { ...member, checked: !member.checked } : member
-        );
+    // const toggleMember = (memberId) => {
+    //     const updatedMembers = members.map((member) =>
+    //         member.id === memberId ? { ...member, checked: !member.checked } : member
+    //     );
 
         setMembers(updatedMembers);
-        localStorage.setItem("Members", JSON.stringify(updatedMembers));
+        localStorage.setItem("members", JSON.stringify(updatedMembers));
+    };
+
+    const deleteMember = (memberId) => {
+        const updatedMembers = members.map(member =>
+            member.id === memberId ? { ...member, deleted: true } : member
+        );
+        setMembers(updatedMembers);
+
+        setTimeout(() => {
+            const MembersAfterDelete = members.filter(member => member.id !== memberId);
+            setMembers(MembersAfterDelete);
+            localStorage.setItem('members', JSON.stringify(MembersAfterDelete));
+        }, 500);
     };
 
     return (
@@ -48,18 +61,23 @@ export default function Member() {
                 </button>
             </div>
 
-            <ul className="MemberList">
+            <div className="MemberList">
                 {members.map((member) => (
-                    <li key={member.id} className={member.checked ? "checked" : ""}>
+                    <div key={member.id} className={member.checked ? "checked" : ""}>
                         <span
                             onClick={() => toggleMember(member.id)}
                             style={{ textDecoration: member.checked ? "line-through" : "none", cursor: "pointer" }}
                         >
                             {member.text}
                         </span>
-                    </li>
+                        <button
+                            className="deleteButton"
+                            onClick={() => deleteMember(member.id)}>
+                            Delete
+                        </button>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 }
