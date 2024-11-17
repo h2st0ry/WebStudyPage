@@ -1,19 +1,68 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 50%;
+  transform: translateY(0);
+  background-color: rgb(255, 246, 230);
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 0;
+}
+
+
+.header::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, rgb(255, 246, 230), rgb(146, 89, 56)); /* 그라데이션 배경 */
+  background-size: 400% 100%;
+  animation: gradientMove 2s linear infinite;
+  z-index: 1;
+}
+
+
+.SiteLogo {
+  width: 340px;
+  height: 340px;
+  font-size: 70px;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 246, 230);
+  border-radius: 10px;
+}
+
+.SiteLogo img {
+  width: 200px;
+  height: 220px;
+  order: -1;
+}
+
 .SiteName {
-  display: inline-block;
-  font-size: 60px;
-  font-weight: 100;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  width: 70%;
-  text-align: left;
-  margin: 20px;
-  margin-left: 10px;
-  margin-right: 100px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .SiteName:hover {
   transition: 1s ease;
   transform-origin: center center;
   transform: scale(1.03);
+  color:rgb(146, 89, 56);;
 }
 
 .PageTitle {
@@ -42,7 +91,7 @@ a {
 a:hover {
   transition: 1s ease;
   transform: scale(1.03);
-  color:rgb(146, 89, 56)
+  color:rgb(146, 89, 56);
 }
 
 a.MyPage {
@@ -53,48 +102,27 @@ a.MyPage {
 
 .MyCategory {
   display: flex;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 18px;
   width: 30vw;
   float: right;
-
-  margin-top: 80px;
+  margin-top: 5px;
   margin-bottom: 5px;
-
   justify-content: flex-end;
-}
-
-.header {
-  display: flex;
-  position: relative;
-  background-color: rgb(255, 246, 230);
-  border-image: linear-gradient(to right, rgb(255, 255, 255), rgb(169, 207, 223)) 1;;
-  align-items: center;
-  animation: waveGradient 1s ease infinite;
-  z-index: 2;
-}
-
-.header img {
-  margin-left: 110px;
-  width: 110px;
-  height: 110px;
-}
-
-.header::before {
-  content: '';
   position: absolute;
-  bottom: 0;
-  left: 0;
+  top: 0;
   right: 0;
-  height: 2px;
-  background: linear-gradient(to right, rgb(255, 246, 230), rgb(146, 89, 56)); /* 그라데이션 배경 */
-  background-size: 400% 100%;
-  animation: gradientMove 2s linear infinite;
-  z-index: 1;
+}
+
+.MyCategory a {
+  padding-left: 15px;
 }
 
 
 .content {
+  margin-top: 300px;
   margin-left: 260px;
+  height: 100vh;
   padding: 20px;
   position: relative;
   font-size: medium;
@@ -103,25 +131,26 @@ a.MyPage {
 }
 
 
-.SideBarBox {
+.CategoryBar {
   display: flex;
-  position: fixed;
-  width: 260px;
-  height: 100vh;
+  position: absolute;
+  top: 50%;
+  margin-top: 40px;
+  width: 100%;
+  height: calc(100vh - 50%);
   padding-top: 20px;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
-  gap: 20px;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  z-index: 3;
+  z-index: 1;
 }
+
 
 .box {
   display: flex;
-  width: 40px;
+  width: 200px;
   height: 50px;
-  border-top-right-radius: 13px;
-  border-bottom-right-radius: 13px;  
+  border-radius: 13px;
   background-color: rgb(146, 86, 51);
   box-shadow: 0 4px 9px rgb(37, 19, 8);
 

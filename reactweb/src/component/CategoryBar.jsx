@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function SideBar() {
+export default function CategoryBar() {
   const [activeBox, setActiveBox] = useState(null);
 
   const handleBoxClick = (index) => {
@@ -17,7 +17,7 @@ export default function SideBar() {
   ];
 
   return (
-    <div className="SideBarBox">
+    <div className="CategoryBar">
       {categories.map((category, index) => (
         <div
           key={index}

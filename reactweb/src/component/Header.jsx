@@ -1,18 +1,19 @@
 import React from "react";
 import MyCategory from "./MyCategory";
-import SideBar from "./SideBar";
+import CategoryBar from "./CategoryBar";
 
 
 export default function Header() {
     return (
         <>
             <div className="header">
-                <img src="/gromit.png" alt="Gromit"/>
-                <a className="SiteName" href="/">We_eb</a>
-                <MyCategory />
+                <div className="SiteLogo">
+                    <div className="SiteName" href="/">We_eb</div>
+                    <img src="/gromit.png" alt="Gromit" />
+                </div>
             </div>
-            <SideBar />
-
+            <MyCategory />
+            <CategoryBar />
         </>
     );
 }

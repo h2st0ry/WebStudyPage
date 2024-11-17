@@ -13,7 +13,7 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <div className="content">
+      <body>
         <Routes>
           <Route path="/MyPage" element={<MyPage />} />
           <Route path="/Member" element={<Member />} />
@@ -23,7 +23,7 @@ function App() {
           <Route path="/ToDoList" element={<ToDoList />} />
           <Route path="/Tools" element={<Tools />} />
         </Routes>
-      </div>
+      </body>
     </BrowserRouter>
   );
 }
